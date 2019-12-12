@@ -1,7 +1,7 @@
 'use strict';
 
 function main(params) {
-  const name = params.name || 'World';
+  const name = params.name || 'ESDS';
   console.log('log', { payload: `Hello, ${name}` });
   return { payload: `Hello, ${name}!` };
 }
