@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy to Dev') {
             environment {
-                OW_AUTH = credentials('OW_AUTH')
+                OW_AUTH = credentials('OPENWHISK_DEV_AUTH')
                 OW_APIHOST = credentials('OW_APIHOST')
             }
                 steps {
@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Deploy to SIT') {
             environment {
-                OW_AUTH = credentials('OW_AUTH')
+                OW_AUTH = credentials('OPENWHISK_SIT_AUTH')
                 OW_APIHOST = credentials('OW_APIHOST')
             }
                 steps {
@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Deploy to Pre-Prod') {
             environment {
-                OW_AUTH = credentials('OW_AUTH')
+                OW_AUTH = credentials('OPENWHISK_PRE_PROD_AUTH')
                 OW_APIHOST = credentials('OW_APIHOST')
             }
                 steps {
@@ -50,7 +50,7 @@ pipeline {
         }
         stage('Deploy to Production') {
             environment {
-                OW_AUTH = credentials('OW_AUTH')
+                OW_AUTH = credentials('OPENWHISK_PROD_AUTH')
                 OW_APIHOST = credentials('OW_APIHOST')
             }
             steps {
@@ -60,7 +60,7 @@ pipeline {
     }
     post {
         failure {
-            mail to: 'nishantshrivastav23@gmail.com', subject: 'Build failed', body: 'Please fix!'
+            mail to: 'shzshi@gmail.com', subject: 'Build failed', body: 'Please fix!'
         }
     }
 }
