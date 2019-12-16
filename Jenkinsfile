@@ -21,9 +21,4 @@ pipeline {
     
                 
     }
-    post {
-        failure {
-            mail to: 'nishantshrivastav23@gmail.com', subject: 'Build failed', body: 'Please fix!'
-        }
-    }
 }
