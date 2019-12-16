@@ -11,7 +11,7 @@ pipeline {
 
 	    environment {
                 OW_AUTH = credentials('OW_AUTH')
-                OW_APIHOST = credentials('fn.enlight.dev')
+                OW_APIHOST = credentials('OW_APIHOST')
             }
 
             steps {
