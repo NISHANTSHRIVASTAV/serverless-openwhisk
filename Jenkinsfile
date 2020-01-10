@@ -10,8 +10,8 @@ pipeline {
         stage('Deploy') {
 
 	    environment {
-                OW_AUTH = credentials('OW_AUTH_KEY')
-                OW_APIHOST = credentials('OW_APIHOST_TEST')
+                OW_AUTH = credentials('OW_AUTH')
+                OW_APIHOST = credentials('OW_APIHOST')
             }
 
             steps {
