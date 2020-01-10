@@ -35,6 +35,9 @@ functions:
   endpoint:
     handler: pythontest.endpoint
     runtime: python:3
+  main:
+    handler: handler.main
+    runtime: nodejs
 
 
 #    Functions can be defined using sequences rather than referring 
