@@ -3,4 +3,4 @@ def endpoint(params):
     num2 = params.get("num2")
     
     sum = num2 + num1
-    return {"total sum": sum}
+    return {"sum": sum}
